@@ -1,19 +1,27 @@
 <?php
 
-function adicao() {
-    return isset($_POST['num1'], $_POST['num2']) ? $_POST['num1'] + $_POST['num2'] : "Erro: Valores inválidos";
+function soma($v1, $v2){
+    return $v1+$v2;
 }
 
-function subtracao() {
-    return isset($_POST['num1'], $_POST['num2']) ? $_POST['num1'] - $_POST['num2'] : "Erro: Valores inválidos";
+function subtrai($v1, $v2){
+    return $v1-$v2;
 }
 
-function multiplicacao() {
-    return isset($_POST['num1'], $_POST['num2']) ? $_POST['num1'] * $_POST['num2'] : "Erro: Valores inválidos";
+function multiplica($v1, $v2){
+    return $v1*$v2;
 }
 
-function divisao() {
-    return isset($_POST['num1'], $_POST['num2']) ? ($_POST['num2'] != 0 ? $_POST['num1'] / $_POST['num2'] : "Erro: Divisão por zero") : "Erro: Valores inválidos";
+function dividi($v1, $v2){
+    $resultado;
+    if ($v1 == 0){
+        $resultado = 0;
+    } else if ($v2 == 0){
+        $resultado = 0;
+    } else{
+        $resultado = $v1 / $v2;
+    return $resultado;
+}
 }
 
 ?>

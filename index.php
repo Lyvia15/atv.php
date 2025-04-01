@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora PHP</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body class="container mt-5">
-    <h2>Calculadora Simples</h2>
-    <form action="calcular.php" method="POST">
-        <div class="mb-3">
-            <label for="num1" class="form-label">Número 1:</label>
-            <input type="number" class="form-control" name="num1" required>
-        </div>
-        <div class="mb-3">
-            <label for="num2" class="form-label">Número 2:</label>
-            <input type="number" class="form-control" name="num2" required>
-        </div>
-        <div class="mb-3">
-            <label for="operacao" class="form-label">Operação:</label>
-            <select class="form-select" name="operacao">
-                <option value="adicao">Adição</option>
-                <option value="subtracao">Subtração</option>
-                <option value="multiplicacao">Multiplicação</option>
-                <option value="divisao">Divisão</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Calcular</button>
+<div class="container">
+    <div class="row">
+        <div class="text-center bg-primary mb-5">Calculadora</div>
+        <div class="col">
+    <form action = "calcular.php" method = "post">
+    <label for="" class="form-label">Primeiro número:</label>
+    <input type="number" name ="n1" class="form-control">
+    <label for="" class="form-label">Segundo número:</label>
+    <input type="number" name ="n2" class="form-control" >
+    <select name="operacao" id="">
+    <option value="+">Adição</option>
+    <option value="-">Subtração</option>
+    <option value="x">Multiplicação</option>
+    <option value="/">Divisão</option>
+    </select>
+    <input type="submit" value = "Select" class="btn btn-info">
     </form>
-</body>
-</html>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

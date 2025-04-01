@@ -1,26 +1,25 @@
 <?php
-include 'funcao.php';
+include "funcao.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $operacao = $_POST["operacao"];
-    $resultado = "";
+$n1 = $_POST["n1"];
+$n2 = $_POST["n2"];
+$ope = $_POST["operacao"];
 
-    switch ($operacao) {
-        case "adicao":
-            $resultado = adicao();
-            break;
-        case "subtracao":
-            $resultado = subtracao();
-            break;
-        case "multiplicacao":
-            $resultado = multiplicacao();
-            break;
-        case "divisao":
-            $resultado = divisao();
-            break;
-      
-    }
-    
-    echo "<h3>Resultado: $resultado</h3>"; 
+switch ($ope){
+    case "+":
+        $total = soma($n1,$n2);
+    break;
+    case "-":
+        $total = subtrai($n1, $n2);
+    break;
+    case "x":
+        $total = multiplica($n1, $n2);
+    break;
+    case "/":
+        $total = dividi($n1, $n2);
+    break;
+
 }
+echo "Seu resultado é: ", $total;
+
 ?>
